@@ -13,16 +13,15 @@ pip install -r requirements.txt
 ## Customize program
 
 Things you can change via constants.py:
-<ul>
-<li>Ticker Symbol
-<li>Finance API
-<li>Start Date for stock data
-<li>End Date for stock data
-<li>Number of days to base prediction on
-<li>Sophistication layer
-<li>Start Date for test stock data
-<li>End Date for test stock data
-</ul>
+- Ticker Symbol
+- Finance API
+- Start Date for stock data
+- End Date for stock data
+- Number of days to base prediction on
+- Sophistication layer
+- Start Date for test stock data
+- End Date for test stock data
+
 ## Credits
 
 [NeuralNine's YouTube Tutorial](https://www.youtube.com/watch?v=PuZY9q-aKLw)

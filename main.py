@@ -10,3 +10,11 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 
 # Load Data
 
+tickerSymbol = 'AAPL'
+financeAPI = 'yahoo'
+
+startDate = dt.datetime(2012, 1, 1)
+endDate = dt.datetime(2020, 1, 1)
+
+data = web.DataReader(tickerSymbol, financeAPI, startDate, endDate)
+

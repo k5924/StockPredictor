@@ -7,3 +7,6 @@ import datetime as dt
 from sklearn.preprocessing import MinMaxScalar
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LSTM
+
+# Load Data
+

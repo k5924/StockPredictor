@@ -36,3 +36,22 @@ for x in range(prediction_days, len(scaled_data)):
 x_train, y_train = np.array(x_train), np.array(y_train)
 
 x_train = np.array(x_train, (x_train.shape[0], x_train.shape[1], 1))
+
+# Build the Model
+
+model = Sequential()
+
+# how sophisticated is it
+layers = 50
+
+model.add(LSTM(units=layers, return_sequences=True,
+          input_shape=(x_train.shape[1], 1)))
+model.add(Dropout(0.2))
+model.add(LSTM(units=layers, return_sequences=True))
+model.add(Dropout(0.2))
+model.add(LSTM(units=layers))
+model.add(Dropout(0.2))
+model.add(Dense(units=1))  # prediction of the next closing price
+
+model.compile(optimizer='adam', loss='mean_squared_error')
+model.fit(x_train, y_train, epochs=25, batch_size=32)

@@ -94,7 +94,7 @@ plt.show()
 real_data = [
     model_inputs[len(model_inputs) + 1 - kPredictionDays: len(model_inputs+1), 0]]
 real_data = np.array(real_data)
-real_data = np.reshape(real_data, (real_data.shape[0], real_data.shape[1], 1))
+real_data = ReshapeData(real_data)
 
 prediction = model.predict(real_data)
 prediction = scalar.inverse_transform(prediction)
